@@ -8,15 +8,10 @@ import java.util.*;
 
 public class RR implements Algorithm {
     private List<Task> queue;
-    private Task currentTask;
-    private int tasksRun;
     private int quantum = 10;
-    private List<Task> doneQueue = new ArrayList<Task>();
 
     public RR(List<Task> queue) {
         this.queue = queue;
-        tasksRun = queue.size();
-        this.currentTask = queue.get(0);
     }
 
     @Override
