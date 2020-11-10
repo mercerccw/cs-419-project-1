@@ -20,7 +20,7 @@ public class SJF implements Algorithm {
 
     @Override
     public void schedule() {
-        System.out.println("Shortest Job First Scheduling\n");
+        System.out.println("Shortest Job First (non-preemptive) Scheduling\n");
         while (!queue.isEmpty() || !waitingQueue.isEmpty()) {
             currentTask = pickNextTask();
             CPU.run(currentTask, currentTask.getBurst());
